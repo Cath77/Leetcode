@@ -3,9 +3,23 @@
 ## 原表修改法
 ### Python
 ```
-
-
-
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
+        # 原表修改法
+        while head != None and head.val == val:
+            head = head.next
+        cur = head
+        while cur != None and cur.next != None:
+            if cur.next.val == val:
+                cur.next = cur.next.next
+            else:
+                cur = cur.next
+        return head
 ```
 
 ### C++
@@ -50,9 +64,23 @@ public:
 ## 虚拟头结点法
 ### Python
 ```
-
-
-
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
+        # 虚拟头结点法
+        dummyHead = ListNode(0, head)
+        cur = dummyHead
+        while cur != None and cur.next != None:
+            if cur.next.val == val:
+                cur.next = cur.next.next
+            else:
+                cur = cur.next
+        head = dummyHead.next
+        return head
 ```
 
 ### C++

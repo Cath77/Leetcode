@@ -98,10 +98,20 @@ C++需要从内存中释放被删除节点的内存，而Python不需要。
 
 
 
-
 ## 707.设计链表
 
 ### 定义
+* 实现 MyLinkedList 类：
+  * ```MyLinkedList()```: 初始化 MyLinkedList 对象。
+  * ```int get(int index)```：获取链表中第 index 个节点的值。如果索引无效，则返回-1。
+  * ```void addAtHead(int val)```：在链表的第一个元素之前添加一个值为 val 的节点。插入后，新节点将成为链表的第一个节点。
+  * ```void addAtTail(int val)```：将值为 val 的节点追加到链表的最后一个元素。
+  * ```void addAtIndex(int index, int val)```：在链表中的第 index 个节点之前添加值为 val  的节点。如果 index 等于链表的长度，则该节点将附加到链表的末尾。如果 index 大于链表长度，则不会插入节点。
+  * ```void deleteAtIndex(int index)```：如果索引 index 有效，则删除链表中的第 index 个节点。
+
+
 
 ### 例题
-[707.设计链表](./707_Design_Linked_List.md)
+[707.设计链表](./707_Design_Linked_List.md)  
+时间复杂度: 涉及 index 的相关操作为 $O(index)$, 其余为 $O(1)$  
+空间复杂度: $O(n)$
