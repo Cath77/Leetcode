@@ -13,3 +13,4 @@ My Leetcode Tutorial Notebook
 ## Linked List
 * [Notebook](./linked_list/00_linked_list.md)
  * [203.移除链表元素](./linked_list/203_remove_element.md)
+ * [707.设计链表](./linked_list/707_Design_Linked_List.md)
