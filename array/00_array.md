@@ -22,7 +22,7 @@ C++数组地址调用(16进制H)：`&array[][]`
 * 空间复杂度：O(1)
 
 ### 例题
-[704_二分法](./array_704_binary_search.md)
+[704_二分法](./704_binary_search.md)
 
 * **左闭右闭`[left, right]`**  $\sqrt{}$  
 ```
@@ -61,7 +61,7 @@ while (left < right) {
 数组的元素在内存地址中是连续的，不能单独删除数组中的某个元素，只能覆盖
 
 ### 例题
-[27.移除元素](./array_27_remove_element.md)
+[27.移除元素](./27_remove_element.md)
 
 * **双向指针法**  $\sqrt{}$  
 时间复杂度: O(n)  
@@ -87,7 +87,7 @@ while (left < right) {
 nums已按非递减顺序排序
 
 ### 例题
-[977.有序数组的平方](./array_977_Squares_of_a_Sorted_Array.md)  
+[977.有序数组的平方](./977_Squares_of_a_Sorted_Array.md)  
 
 
 * **双指针法**  $\sqrt{}$  
@@ -108,7 +108,7 @@ nums已按非递减顺序排序
 1 <= nums[i] <= 10^5
 
 ### 例题
-[209.长度最小的子数组](./array_209_Minimum_Size_Subarray_Sum.md)
+[209.长度最小的子数组](./209_Minimum_Size_Subarray_Sum.md)
 
 * **滑动窗口**  $\sqrt{}$   
 时间复杂度：O(n)  
@@ -123,7 +123,7 @@ nums已按非递减顺序排序
 1 <= n <= 20
 
 ### 例题
-[59.螺旋矩阵II](./array_59_Spiral_Matrix_II.md)
+[59.螺旋矩阵II](./59_Spiral_Matrix_II.md)
 
 * **模拟法**  $\sqrt{}$  
 模拟顺时针画矩阵的过程:  
