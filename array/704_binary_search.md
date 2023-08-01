@@ -1,4 +1,5 @@
 # 二分法
+[Leetcode](https://leetcode.cn/problems/binary-search/)
 
 ## Python
 ### [left, right]
