@@ -4,6 +4,10 @@ My Leetcode Tutorial Notebook
 ## Array
 * [Notebook](./array/00_array.md)
   * [704_二分法](./array/704_binary_search.md)
+    * [35_搜索插入位置](./35_search_insert_position.md)
+    * [34_在排序数组中查找元素的第一个和最后一个位置](./34_find-first-and-last-position-of-element-in-sorted-array.md)
+    * [69_x的平方根](./69_sqrtx.md)
+    * [367_有效的完全平方数](./367_valid-perfect-square.md)
   * [27.移除元素](./array/27_remove_element.md)
   * [977.有序数组的平方](./array/977_Squares_of_a_Sorted_Array.md) 
   * [209.长度最小的子数组](./array/209_Minimum_Size_Subarray_Sum.md)
