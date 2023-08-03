@@ -1,4 +1,6 @@
 # 移除元素
+[Leetcode](https://leetcode.cn/problems/remove-element/)
+
 * 数组的元素在内存地址中是连续的，不能单独删除数组中的某个元素，只能覆盖
 * A difference between for loop in Python and for loop in C++ is that in C++, you can modify the counter variable or the range within the body of the loop. In Python, you cannot modify the counter variable or the range within the body of the loop.
 

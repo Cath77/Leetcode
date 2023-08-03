@@ -81,6 +81,12 @@ while (left < right) {
 时间复杂度: O(n^2)  
 空间复杂度: O(1)
 
+[26_删除排序数组中的重复项](./26_remove-duplicates-from-sorted-array.md)
+[283_移动零](./283_move-zeroes.md)
+[844_比较含退格的字符串](./844_backspace-string-compare.md)
+[977.有序数组的平方](./977_squares-of-a-sorted-array.md)
+
+
 
 
 ## 977.有序数组的平方 -> 双指针法
