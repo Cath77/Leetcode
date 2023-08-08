@@ -8,33 +8,85 @@
 * 
 
 解法:  
-* 
+* 双指针法：快慢指针
+** 快指针遍历数组，慢指针指向第一个0元素
+** 如遇到慢指针指向0，而快指针指向的元素不为0，则交换快慢指针指向的元素，慢指针后移
 
 
 ## C++
 ```
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int slow = 0;
+        for (int fast = 0; fast < nums.size(); fast++) {
+            while (nums[slow] != 0 and slow < fast) {
+                slow++;
+            }
+            if (nums[slow] == 0 && nums[fast] != 0) {
+                nums[slow++] = nums[fast];
+                nums[fast] = 0;
+            }
+        }
+    }
+};
+```
 
+```
+// 官方解答
+// 非0，交换数据，左右指针都往右移
+// 0，右指针右移
+
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int slow = 0;
+        int fast = 0;
+        while (fast < nums.size()) {
+            if (nums[fast] != 0) {
+                swap(nums[slow], nums[fast]);
+                slow++;
+            }
+            fast++;
+        }
+    }
+};
 ```
 
 ## Python
 ```
-
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        slow = 0
+        fast = 0
+        while fast < len(nums):
+            while (nums[slow] != 0) and (slow < fast):
+                slow += 1
+            if (nums[slow] == 0) and (nums[fast] != 0):
+                nums[slow] = nums[fast]
+                nums[fast] = 0
+                slow += 1
+            fast += 1
 ```
 
+```
+# 官方解答
+# 非0，交换数据，左右指针都往右移
+# 0，右指针右移
 
-We modified the prompt again and have a functional parameter set now. It's `temperature = 0.6, frequency_penalty = 10.0, and presence_penalty = 1.0`. The BLEU scores are reduced to `5.2813154577367` for entailment and `3.3839253585342903` for contradiction.
-The scores: https://app.box.com/file/1262241808578?s=d77jhteymea57a2x0302i2qzme6tp1bv
-The outputs: https://app.box.com/folder/219522681159?s=27qua8bubiytio8qxmh6h3hp0vxvuqde
-
-A few problems remains:
-1. Patterns
-Only two patterns are seen for contradiction: 'In contrast to the claim that {rephrase of the original claim}' and 'The claim that {rephrase of the original claim} {phrases showing negative sentiment}.' As for entailment, no patterns have occurred so far.
-2. Incomplete sentences
-One problem is that ChatGPT tends to generate responses that are too long, resulting in responses that contain too much useless information. In order to control the length of the responses, we first add a constraint in the prompt, asking Chatgpt to generate the answer of no more than 50 words, and this constraint seems to be ignored by ChatGPT.
-Then we use the parameter `max_token` of API, set it to 100, so that ideally the generated response would contain at most 100 tokens. However, this works very differently than we thought it would. It seems like ChatGPT still first tries to generate a long response, then stop at the 100th tokens. This leaves us with many incomplete responses.
-
-We've tried many ways to address these problems, but unfortunately minor improvements have been achieved so far. Therefore, I would like to ask if it's allowed to conduct manual postprocessing. Since the current responses usually contain several sentences, and since the patterns are usually the prefix of the first sentence and the incomplete sentences occurs only at the end of the response, we can simply manually remove those unwanted parts. This should still give us responses with enough details.
-
-We'd appreciate any feedback from you. And we'll keep finding better parameter sets before Aniket send us the candidate sentences.
-
-
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        slow = 0
+        fast = 0
+        while fast < len(nums):
+            if nums[fast] != 0:
+                nums[slow], nums[fast] = nums[fast], nums[slow]
+                slow += 1
+            fast += 1
+```
