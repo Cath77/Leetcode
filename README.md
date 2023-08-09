@@ -14,6 +14,7 @@ My Leetcode Tutorial Notebook
     * [844_比较含退格的字符串](./array/844_backspace-string-compare.md)
     * [977.有序数组的平方](./array/977_Squares_of_a_Sorted_Array.md)
   * [977.有序数组的平方](./array/977_Squares_of_a_Sorted_Array.md) 
+    * [88.合并两个有序数组](./array/88_merge-sorted-array.md)
   * [209.长度最小的子数组](./array/209_Minimum_Size_Subarray_Sum.md)
   * [59.螺旋矩阵II](./array/59_Spiral_Matrix_II.md)
 
