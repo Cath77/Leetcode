@@ -127,6 +127,8 @@ nums已按非递减顺序排序
 时间复杂度：O(n)  
 空间复杂度：O(1)
 
+[904_水果成篮](./904_fruit-into-baskets.md)
+[76_最小覆盖子串](./76_minimum-window-substring.md)
 
 ## 59.螺旋矩阵II -> 模拟法
 

@@ -1,7 +1,9 @@
 # 209.长度最小的子数组
+[Leetcode](https://leetcode.cn/problems/minimum-size-subarray-sum/)
 
 ## Python
 ```
+# 官方解答
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         left = 0
@@ -21,6 +23,7 @@ class Solution:
 
 ## C++
 ```
+// 官方解答
 class Solution {
 public:
     int minSubArrayLen(int target, vector<int>& nums) {
@@ -37,6 +40,29 @@ public:
             right++;
         }
         return sub_len != INT32_MAX ? sub_len : 0;
+    }
+};
+```
+
+```
+class Solution {
+public:
+    int minSubArrayLen(int target, vector<int>& nums) {
+        int start = 0;
+        int end = 0;
+        int min_len = INT32_MAX;
+        int sum = 0;
+        while (end < nums.size()) {
+            sum += nums[end++];
+            if (sum >= target && sum - nums[start] < target) {
+                min_len = min_len > (end - start) ? (end - start) : min_len;
+            }
+            while (sum >= target && sum >= target + nums[start]) {
+                sum -= nums[start++];
+                min_len = min_len > (end - start) ? (end - start) : min_len;
+            }
+        }
+        return min_len != INT32_MAX ? min_len : 0;
     }
 };
 ```
