@@ -128,7 +128,7 @@ nums已按非递减顺序排序
 空间复杂度：O(1)
 
 [904_水果成篮（哈希表）](../hash_table//904_fruit-into-baskets.md)  
-[76_最小覆盖子串](./76_minimum-window-substring.md)  
+[76_最小覆盖子串](../hash_table/76_minimum-window-substring.md)  
 
 ## 59.螺旋矩阵II -> 模拟法
 

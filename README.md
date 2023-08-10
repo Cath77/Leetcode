@@ -17,7 +17,7 @@ My Leetcode Tutorial Notebook
     * [88.合并两个有序数组](./array/88_merge-sorted-array.md)
   * [209.长度最小的子数组](./array/209_Minimum_Size_Subarray_Sum.md)
     * [904_水果成篮](./hash_table/904_fruit-into-baskets.md)
-    * [76_最小覆盖子串](./array/76_minimum-window-substring.md)
+    * [76_最小覆盖子串](./hash_table/76_minimum-window-substring.md)
   * [59.螺旋矩阵II](./array/59_Spiral_Matrix_II.md)
 
 
@@ -29,3 +29,4 @@ My Leetcode Tutorial Notebook
 
 ## Hash Table
   * [904_水果成篮](./hash_table/904_fruit-into-baskets.md)
+  * [76_最小覆盖子串](./hash_table/76_minimum-window-substring.md)
