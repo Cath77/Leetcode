@@ -21,6 +21,30 @@ class Solution:
         else: return 0
 ```
 
+```
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        start, end = 0, 0
+        cur_sum = 0
+        min_len = float('inf')
+
+        while end < len(nums):
+            cur_sum += nums[end]
+            end += 1
+
+            if cur_sum >= target and cur_sum - nums[start] < target:
+                cur_len = end - start
+                min_len = min(cur_len, min_len)
+
+            while cur_sum >= target and cur_sum - nums[start] >= target:
+                cur_sum -= nums[start]
+                start += 1
+                cur_len = end - start
+                min_len = min(cur_len, min_len)
+
+        return min_len if min_len != float('inf') else 0
+```
+
 ## C++
 ```
 // 官方解答
