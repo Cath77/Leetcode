@@ -45,9 +45,9 @@ while (left < right) {
 }
 ```
 
-[35_搜索插入位置](./35_search_insert_position.md)
-[34_在排序数组中查找元素的第一个和最后一个位置](./34_find-first-and-last-position-of-element-in-sorted-array.md)
-[69_x的平方根](./69_sqrtx.md)
+[35_搜索插入位置](./35_search_insert_position.md)  
+[34_在排序数组中查找元素的第一个和最后一个位置](./34_find-first-and-last-position-of-element-in-sorted-array.md)  
+[69_x的平方根](./69_sqrtx.md)  
 [367_有效的完全平方数](./367_valid-perfect-square.md)
 
 
@@ -81,9 +81,9 @@ while (left < right) {
 时间复杂度: O(n^2)  
 空间复杂度: O(1)
 
-[26_删除排序数组中的重复项](./26_remove-duplicates-from-sorted-array.md)
-[283_移动零](./283_move-zeroes.md)
-[844_比较含退格的字符串](./844_backspace-string-compare.md)
+[26_删除排序数组中的重复项](./26_remove-duplicates-from-sorted-array.md)  
+[283_移动零](./283_move-zeroes.md)  
+[844_比较含退格的字符串](./844_backspace-string-compare.md)  
 [977.有序数组的平方](./977_Squares_of_a_Sorted_Array.md)
 
 
@@ -127,8 +127,8 @@ nums已按非递减顺序排序
 时间复杂度：O(n)  
 空间复杂度：O(1)
 
-[904_水果成篮](./904_fruit-into-baskets.md)
-[76_最小覆盖子串](./76_minimum-window-substring.md)
+[904_水果成篮（哈希表）](../hash_table//904_fruit-into-baskets.md)  
+[76_最小覆盖子串](./76_minimum-window-substring.md)  
 
 ## 59.螺旋矩阵II -> 模拟法
 
