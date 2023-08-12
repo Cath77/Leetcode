@@ -5,6 +5,41 @@
 ```
 class Solution:
     def generateMatrix(self, n: int) -> List[List[int]]:
+        startx = 0
+        starty = 0
+        max_round = n // 2
+        cur_round = 1
+        value = 1
+
+        nums = [[0 for i in range(n)] for i in range(n)]
+
+        while cur_round <= max_round:
+            for j in range(starty, n - cur_round):
+                nums[startx][j] = value
+                value += 1
+            for i in range(startx, n - cur_round):
+                nums[i][n - cur_round] = value
+                value += 1
+            for j in range(n - cur_round, starty, -1):
+                nums[n - cur_round][j] = value
+                value += 1
+            for i in range(n - cur_round, startx, -1):
+                nums[i][starty] = value
+                value += 1
+
+            cur_round += 1
+            startx += 1
+            starty += 1
+
+        if n % 2:
+            nums[startx][starty] = value
+
+        return nums
+```
+
+```
+class Solution:
+    def generateMatrix(self, n: int) -> List[List[int]]:
         count = 1   # 计数
         startx, starty = 0, 0   # 起始位置
         midx, midy = n//2, n//2 # 中心位置
@@ -33,6 +68,45 @@ class Solution:
 ```
 
 ## C++
+```
+class Solution {
+public:
+    vector<vector<int>> generateMatrix(int n) {
+        vector<vector<int>> nums(n, vector<int>(n, 0));
+        int startx = 0, starty = 0;
+        int i, j;
+        int value = 1;
+        int cur_round = 1;
+        int max_round = n / 2;
+
+        while (cur_round <= max_round) {
+            for (j = starty; j < n - cur_round; j++) {
+                nums[startx][j] = value++;
+            }
+            for (i = startx; i < n - cur_round; i++) {
+                nums[i][j] = value++;
+            }
+            for (; j > starty; j--) {
+                nums[i][j] = value++;
+            }
+            for (; i > startx; i--) {
+                nums[i][j] = value++;
+            }
+
+            cur_round++;
+            startx++;
+            starty++;
+        }
+
+        if (n % 2 != 0) {
+            nums[startx][starty] = value;
+        }
+
+        return nums;        
+    }
+};
+```
+
 ```
 class Solution {
 public:
