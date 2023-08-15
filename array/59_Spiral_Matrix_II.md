@@ -3,6 +3,45 @@
 
 ## Python
 ```
+# 解法同54题：不断修改四条边界直到遍历完所有元素
+class Solution:
+    def generateMatrix(self, n: int) -> List[List[int]]:
+        result = [[0] * n for i in range(n)]
+        upper, down = 0, n - 1
+        left, right = 0, n - 1
+        cur_value = 1
+        
+        while True:
+            # left to right
+            for i in range(left, right + 1):
+                result[upper][i] = cur_value
+                cur_value += 1
+            upper += 1
+            if upper > down: break
+            # upper to down
+            for i in range(upper, down + 1):
+                result[i][right] = cur_value
+                cur_value += 1
+            right -= 1
+            if right < left: break
+            # right to left
+            for i in range(right, left - 1, -1):
+                result[down][i] = cur_value
+                cur_value += 1
+            down -= 1
+            if down < upper: break
+            # down to upper
+            for i in range(down, upper - 1, -1):
+                result[i][left] = cur_value
+                cur_value += 1
+            left += 1
+            if left > right: break
+
+        return result
+```
+
+
+```
 class Solution:
     def generateMatrix(self, n: int) -> List[List[int]]:
         startx = 0
@@ -68,6 +107,48 @@ class Solution:
 ```
 
 ## C++
+```
+// 解法同54题：不断修改四条边界直到遍历完所有元素
+class Solution {
+public:
+    vector<vector<int>> generateMatrix(int n) {
+        vector<vector<int>>matrix (n, vector<int>(n, 0));
+        
+        int upper = 0, down = n - 1;
+        int left = 0, right = n - 1;
+        int cur_value = 1;
+
+        while (true) {
+            // left to right
+            for (int i = left; i <= right; i++) {
+                matrix[upper][i] = cur_value++;
+            }
+            if (++upper > down) break;
+
+            // upper to down
+            for (int i = upper; i <= down; i++) {
+                matrix[i][right] = cur_value++;
+            }
+            if (--right < left) break;
+
+            // right to left
+            for (int i = right; i >= left; i--) {
+                matrix[down][i] = cur_value++;
+            }
+            if (--down < upper) break;
+
+            // down to upper
+            for (int i = down; i >= upper; i--) {
+                matrix[i][left] = cur_value++;
+            }
+            if (++left > right) break;
+        }
+        return matrix;
+    }
+};
+```
+
+
 ```
 class Solution {
 public:

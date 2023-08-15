@@ -20,6 +20,48 @@
 
 ## C++
 ```
+\\ 精选解答
+class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        vector<int> result;
+        int m = matrix.size(), n = matrix[0].size();
+
+        int upper = 0, down = m - 1;
+        int left = 0, right = n - 1;
+
+        while (true) {
+            // left to right
+            for (int i = left; i <= right; i++) {
+                result.push_back(matrix[upper][i]);
+            }
+            if (++upper > down) break;
+            
+            // upper to dowm
+            for (int i = upper; i <= down; i++) {
+                result.push_back(matrix[i][right]);
+            }
+            if (--right < left) break;
+
+            // right to left
+            for (int i = right; i >= left; i--) {
+                result.push_back(matrix[down][i]);
+            }
+            if (--down < upper) break;
+
+            // down to upper
+            for (int i = down; i >= upper; i--) {
+                result.push_back(matrix[i][left]);
+            }
+            if (++left > right) break;
+        }
+        return result;
+    }
+};
+```
+
+
+```
 // 自己写的
 class Solution {
 public:
@@ -70,5 +112,43 @@ public:
 
 ## Python
 ```
+# 精选解答
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        m, n = len(matrix), len(matrix[0])
+        result = []
 
+        upper, down = 0, m - 1
+        left, right = 0, n - 1
+
+        while True:
+            # left to right
+            for i in range(left, right + 1):
+                result.append(matrix[upper][i])
+            upper += 1
+            if upper > down:
+                break
+            
+            # upper to down
+            for i in range(upper, down + 1):
+                result.append(matrix[i][right])
+            right -= 1
+            if right < left:
+                break
+            
+            # right to left
+            for i in range(right, left - 1, -1):
+                result.append(matrix[down][i])
+            down -= 1
+            if down < upper:
+                break
+
+            # down to upper
+            for i in range(down, upper - 1, -1):
+                result.append(matrix[i][left])
+            left += 1
+            if left > right:
+                break
+
+        return result
 ```
