@@ -19,12 +19,13 @@ My Leetcode Tutorial Notebook
     * [904_水果成篮](./hash_table/904_fruit-into-baskets.md)
     * [76_最小覆盖子串](./hash_table/76_minimum-window-substring.md)
   * [59.螺旋矩阵II](./array/59_Spiral_Matrix_II.md)
-    * [54.螺旋矩阵](./54_spiral-matrix.md) 
+    * [54.螺旋矩阵](./array/54_spiral-matrix.md) 
 
 
 ## Linked List
 * [Notebook](./linked_list/00_linked_list.md)
   * [203.移除链表元素](./linked_list/203_remove_element.md)
+    * [237. 删除链表中的节点](./linked_list/237_delete-node-in-a-linked-list.md)
   * [707.设计链表](./linked_list/707_Design_Linked_List.md)
 
 
