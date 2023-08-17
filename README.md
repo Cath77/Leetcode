@@ -30,5 +30,6 @@ My Leetcode Tutorial Notebook
 
 
 ## Hash Table
+* [Notebook](./hash_table/00_hash_table.md)
   * [904_水果成篮](./hash_table/904_fruit-into-baskets.md)
   * [76_最小覆盖子串](./hash_table/76_minimum-window-substring.md)

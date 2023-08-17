@@ -466,5 +466,84 @@ public:
 
 ### Python
 ```
+class DListNode:
+    def __init__(self, val = 0, next = None, prev = None):
+        self.val = val
+        self.next = next
+        self.prev = prev
 
+class MyLinkedList:
+
+    def __init__(self):
+        self.size = 0
+        self.head = DListNode()
+        self.tail = DListNode(0, None, self.head)
+        self.head.next= self.tail
+
+    def get(self, index: int) -> int:
+        if index < 0 or index >= self.size:
+            return -1
+        else:
+            cur = self.head
+            for i in range(-1, index):
+                cur = cur.next
+            return cur.val
+
+    def addAtHead(self, val: int) -> None:
+        new_node = DListNode(val, self.head.next, self.head)
+        self.head.next.prev = new_node
+        self.head.next = new_node
+        self.size += 1
+
+    def addAtTail(self, val: int) -> None:
+        new_node = DListNode(val, self.tail, self.tail.prev)
+        self.tail.prev.next = new_node
+        self.tail.prev = new_node
+        self.size += 1
+
+    def addAtIndex(self, index: int, val: int) -> None:
+        if index < 0 or index > self.size:
+            return
+        elif index == 0:
+            self.addAtHead(val)
+        elif index == self.size:
+            self.addAtTail(val)
+        else:
+            if index < self.size // 2:
+                cur = self.head
+                for i in range(-1, index - 1):
+                    cur = cur.next
+                new_node = DListNode(val, cur.next, cur)
+                cur.next.prev = new_node
+                cur.next = new_node
+                self.size += 1
+            else:
+                cur = self.tail
+                for i in range(self.size, index, -1):
+                    cur = cur.prev
+                new_node = DListNode(val, cur, cur.prev)
+                cur.prev.next = new_node
+                cur.prev = new_node
+                self.size += 1
+
+    def deleteAtIndex(self, index: int) -> None:
+        if index < 0 or index >= self.size:
+            return
+        else:
+            if index < self.size // 2:
+                cur = self.head
+                for i in range(-1, index - 1):
+                    cur = cur.next
+                tmp = cur.next
+                cur.next = tmp.next
+                tmp.next.prev = cur
+                self.size -= 1
+            else:
+                cur = self.tail
+                for i in range(self.size, index + 1, -1):
+                    cur = cur.prev
+                tmp = cur.prev
+                cur.prev = tmp.prev
+                tmp.prev.next = cur
+                self.size -= 1
 ```
