@@ -28,6 +28,7 @@ My Leetcode Tutorial Notebook
     * [237. 删除链表中的节点](./linked_list/237_delete-node-in-a-linked-list.md)
   * [707.设计链表](./linked_list/707_Design_Linked_List.md)
   * [206. 反转链表](./linked_list/206_reverse-linked-list.md)
+    * [92. 反转链表 II](./linked_list/92_reverse-linked-list-ii.md)
 
 
 ## Hash Table
