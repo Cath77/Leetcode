@@ -6,6 +6,56 @@
 
 ## 解法:  
 
+### 头插法
+在需要反转的区间里，每遍历到一个节点，让这个新节点来到反转部分的起始位置。链表只遍历了一次。
+
+* 性能
+    * 时间复杂度: $O(n)$，其中 n 是链表的长度。需要遍历链表一次  
+    * 空间复杂度: $O(1)$。
+
+#### C++
+```
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if (head == nullptr || head->next == nullptr) return head;
+
+        ListNode* dummyHead = new ListNode(-1, head);
+        ListNode* cur = head;
+        ListNode* next;
+
+        while (cur->next != nullptr) {
+            next = cur->next;
+            cur->next = next->next;
+            next->next = dummyHead->next;
+            dummyHead->next = next;
+        }
+
+        return dummyHead->next;
+    }
+};
+```
+
+
+#### Python
+```
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if head == None or head.next == None:
+            return head
+        else:
+            dummyHead = ListNode(-1, head)
+            cur = dummyHead.next
+            while cur.next != None:
+                nxt = cur.next
+                cur.next = nxt.next
+                nxt.next = dummyHead.next
+                dummyHead.next = nxt
+            return dummyHead.next
+
+```
+
+
 ### 迭代法（双指针法）
 
 * 性能
