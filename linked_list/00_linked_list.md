@@ -148,3 +148,14 @@ C++需要从内存中释放被删除节点的内存，而Python不需要。
     * 空间复杂度: $O(n)$
 
 [92. 反转链表 II](./92_reverse-linked-list-ii.md/)
+
+
+## 24. 两两交换链表中的节点
+[24. 两两交换链表中的节点](./24_swap-nodes-in-pairs.md)
+
+* 法
+  * 性能
+    * 时间复杂度: $O(n)$  
+    * 空间复杂度: $O(n)$
+
+[25. K 个一组翻转链表](./25_reverse-nodes-in-k-group.md)
