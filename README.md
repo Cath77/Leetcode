@@ -33,6 +33,8 @@ My Leetcode Tutorial Notebook
     * [25. K 个一组翻转链表](./linked_list/25_reverse-nodes-in-k-group.md)
   * [19. 删除链表的倒数第 N 个结点](./linked_list/19_remove-nth-node-from-end-of-list.md)
   * [160. 链表相交](./linked_list/160_intersection-of-two-linked-lists.md)
+  * [142. 环形链表 II](./linked_list/142_linked_list_cycle_ii.md)
+    * [141. 环形链表](./linked_list/141_linked_list_cycle.md)
 
 
 ## Hash Table
