@@ -32,6 +32,7 @@ My Leetcode Tutorial Notebook
   * [24. 两两交换链表中的节点](./linked_list/24_swap-nodes-in-pairs.md)
     * [25. K 个一组翻转链表](./linked_list/25_reverse-nodes-in-k-group.md)
   * [19. 删除链表的倒数第 N 个结点](./linked_list/19_remove-nth-node-from-end-of-list.md)
+  * [160. 链表相交](./linked_list/160_intersection-of-two-linked-lists.md)
 
 
 ## Hash Table
