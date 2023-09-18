@@ -201,3 +201,7 @@ C++需要从内存中释放被删除节点的内存，而Python不需要。
 
 
 [141. 环形链表](./141_linked_list_cycle.md)
+
+
+## 总结
+[总结]{https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E9%93%BE%E8%A1%A8%E6%80%BB%E7%BB%93%E7%AF%87.md}
