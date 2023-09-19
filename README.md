@@ -39,5 +39,14 @@ My Leetcode Tutorial Notebook
 
 ## Hash Table
 * [Notebook](./hash_table/00_hash_table.md)
+  * [242.有效的字母异位词](./hash_table/242_valid-anagram.md)
+  * [1002.查找常用字符](./hash_table/1002_find-common-characters.md)
+  * [349.两个数组的交集](./hash_table/349_intersection-of-two-arrays.md)
+  * [202.快乐数](./hash_table/202_happy-number.md)
+  * [1.两数之和](./hash_table/1_two-sum.md)
+  * [454.四数相加 II](./hash_table/454_4sum-ii.md)
+  * [383.赎金信](./hash_table/383_ransom-note.md)
+  * [15.三数之和](./hash_table/15_3sum.md)
+  * [18.四数之和](./hash_table/18_4sum.md)
   * [904_水果成篮](./hash_table/904_fruit-into-baskets.md)
   * [76_最小覆盖子串](./hash_table/76_minimum-window-substring.md)
