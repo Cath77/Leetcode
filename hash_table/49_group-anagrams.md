@@ -27,8 +27,43 @@
 
 ## C++
 ```
+// 方法1：排序
+class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        unordered_map<string, vector<string>> records;
+        for(auto str : strs) {
+            string key = str;
+            sort(str.begin(), str.end());
+            records[str].emplace_back(key);
+        }
+        vector<vector<string>> ans;
+        for(const auto &kv : records) {
+            ans.emplace_back(kv.second);
+        }
+        return ans;
+    }
+};
+
+/*
+Range-Based Loop:
+// Traversing an unordered map
+for (auto x : umap) {
+    cout << x.first << " " << 
+            x.second << endl;
+}
+
+auto T           // I'm copying this
+auto &T          // I'm modifying this
+const auto &T    // I'm reading this
+*/
+```
 
 ```
+# 方法2：计数
+
+```
+
 
 ## Python
 ```
