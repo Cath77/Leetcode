@@ -48,9 +48,14 @@ public:
 /*
 Range-Based Loop:
 // Traversing an unordered map
-for (auto x : umap) {
+for (const auto& x : umap) {
     cout << x.first << " " << 
             x.second << endl;
+}
+
+for (const auto& [k, v] : umap) {
+    cout << k << " " << 
+            v << endl;
 }
 
 auto T           // I'm copying this
@@ -61,7 +66,25 @@ const auto &T    // I'm reading this
 
 ```
 # 方法2：计数
-
+class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        unordered_map<string, vector<string>> records;
+        for (string str:strs) {
+            # Transfer the integer count to a string count
+            string counts(26, '0');
+            for (int i = 0; i < str.size(); i++) {
+                counts[str[i] - 'a']++;
+            }
+            records[counts].emplace_back(str);
+        }
+        vector<vector<string>> results;
+        for (const auto& kv:records) {
+            results.emplace_back(kv.second);
+        }
+        return results;
+    }
+};
 ```
 
 

@@ -40,6 +40,7 @@ My Leetcode Tutorial Notebook
 ## Hash Table
 * [Notebook](./hash_table/00_hash_table.md)
   * [242.有效的字母异位词](./hash_table/242_valid-anagram.md)
+    * [49.字母异位词分组](./hash_table/49_group-anagrams.md)
   * [1002.查找常用字符](./hash_table/1002_find-common-characters.md)
   * [349.两个数组的交集](./hash_table/349_intersection-of-two-arrays.md)
   * [202.快乐数](./hash_table/202_happy-number.md)
