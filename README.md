@@ -43,6 +43,7 @@ My Leetcode Tutorial Notebook
     * [49.字母异位词分组](./hash_table/49_group-anagrams.md)
   * [1002.查找常用字符](./hash_table/1002_find-common-characters.md)
   * [349.两个数组的交集](./hash_table/349_intersection-of-two-arrays.md)
+    * [350.两个数组的交集II](./hash_table/350_intersection-of-two-arrays-ii.md)
   * [202.快乐数](./hash_table/202_happy-number.md)
   * [1.两数之和](./hash_table/1_two-sum.md)
   * [454.四数相加 II](./hash_table/454_4sum-ii.md)
