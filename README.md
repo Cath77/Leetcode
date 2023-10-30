@@ -54,4 +54,3 @@ My Leetcode Tutorial Notebook
   * [454.四数相加 II](./hash_table/454_4sum-ii.md)
   * [383.赎金信](./hash_table/383_ransom-note.md)
   * [904_水果成篮](./hash_table/904_fruit-into-baskets.md)
-  * [76_最小覆盖子串](./hash_table/76_minimum-window-substring.md)

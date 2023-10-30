@@ -1,42 +1,30 @@
 from typing import List
+import collections
 
 class Solution:
-    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
-        if len(nums) < 4:
-            return []
+    def minWindow(self, s: str, t: str) -> str:
+        min_str = ""
+        cur_counts = collections.defaultdict(list)
+        t_counts = collections.Counter(t)
 
-        results = []
-        nums.sort()
+        for right, x in enumerate(s):
+            if x in t and list(t_counts.values()) != [0] * len(t):
+                cur_counts[x].append(right)
+                t_counts[x] -= 1
 
-        for a in range(len(nums)):
-            if target >= 0 and nums[a] > target:
-                break
-            if a > 0 and nums[a] == nums[a - 1]:
-                continue
-            
-            for d in range (len(nums) - 1, a + 2, -1):
-                if d < len(nums) - 1 and nums[d] == nums[d + 1]:
-                    continue
-            
-                b = a + 1
-                c = d - 1
-                while b < c:
-                    sum = nums[a] + nums[b] + nums[c] + nums[d]
-                    if sum > target:
-                        c -= 1
-                    elif sum < target:
-                        b += 1
-                    else:
-                        results.append([nums[a], nums[b], nums[c], nums[d]])
-                        while b < c and nums[b] == nums[b + 1]:
-                            b += 1
-                        while b < c and nums[c] == nums[c - 1]:
-                            c -= 1
-                        
-                        b += 1
-                        c -= 1
+            if len(cur_counts) == len(t):
+                max_idx = max([x[0] for x in list(cur_counts.values())])
+                min_idx = min([x[0] for x in list(cur_counts.values())])
+                if min_str == "" or len(min_str) > (max_idx - min_idx + 1):
+                    min_str = s[min_idx : max_idx + 1]
 
-        return results
+                if len(cur_counts[s[min_idx]]) > 1:
+                    cur_counts[s[min_idx]].pop(0)
+                else:
+                    cur_counts.pop(s[min_idx])
+                t_counts[s[min_idx]] += 1
+
+        return min_str
     
 
-print(Solution().fourSum([-3,-1,0,2,4,5], 2))
+print(Solution().minWindow(s = "aa", t = "aa"))

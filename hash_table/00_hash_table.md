@@ -193,19 +193,30 @@ std::unordered_map 底层实现为哈希表，std::map 和std::multimap 的底�
 ## 383.赎金信 -> method
 [383.赎金信](./383_ransom-note.md) 
 
-* 方法
+* 方法：哈希表
   * 思路
-    * 
-    * 
+    * 因为题目说只有小写字母，那可以用一个长度为26的数组来记录ransomNote里字母出现的次数
+    * 然后再验证这个数组是否包含了magazine所需要的所有字母
   * 性能
     * 时间复杂度: $O(n)$  
     * 空间复杂度: $O(1)$
 
 
 
-[904_水果成篮（哈希表）](./904_fruit-into-baskets.md)  
-[76_最小覆盖子串](./76_minimum-window-substring.md) 
+## 904.水果成篮 -> 滑动窗口与哈希表
+[904_水果成篮（哈希表）](./904_fruit-into-baskets.md)
+
+* 方法：滑动窗口与哈希表
+  * 思路
+    * left 和 right 分别表示满足要求的窗口的左右边界，同时我们使用哈希表存储这个窗口内的数以及出现的次数。
+    * 每次将 right 移动一个位置，并将 fruits[right] 加入哈希表。
+        * 如果此时哈希表中出现超过两个键值对，则不断移动 left，将fruits[left]从哈希表中移除，直到哈希表重新满足长度为2。
+            * 需要注意的是，将 fruits[left] 从哈希表中移除后，如果 fruits[left] 在哈希表中的出现次数减少为 0，需要将对应的键值对从哈希表中移除。
+        * 取满足条件的窗口的最大宽度。
+  * 性能
+    * 时间复杂度: $O(n)$，其中 n 是数组 fruits 的长度。
+    * 空间复杂度: $O(1)$，因为哈希表中最多只会存储 3 个键值对。
 
 
 ## 总结
-![总结](...)
+[总结](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E5%93%88%E5%B8%8C%E8%A1%A8%E6%80%BB%E7%BB%93.md)
